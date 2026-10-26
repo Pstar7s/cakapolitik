@@ -1,6 +1,12 @@
+CAKAPOLITIKA
+
 Folder config/config.php
 - setting database : baris 22-29
 - setting email : baris 68-79
 - setting API AI : baris 35-47
 
 File database ada di folder database/cakapolitik_ub.sql
+
+CAKAROOM
+-Buat endpoint /room
+-untuk databse bisa dijadikan satu bila memungkinkan
