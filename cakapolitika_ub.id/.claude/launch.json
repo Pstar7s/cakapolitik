@@ -1,0 +1,12 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "cakapolitik_ub (XAMPP Apache)",
+      "runtimeExecutable": "cmd",
+      "runtimeArgs": ["/c", "echo XAMPP Apache already serves this app on port 8080 && ping -n 3 127.0.0.1 > nul"],
+      "port": 8080,
+      "url": "http://localhost:8080/cakapolitik_ub"
+    }
+  ]
+}

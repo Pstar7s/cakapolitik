@@ -1,0 +1,27 @@
+# cakapolitik_ub — front controller routing
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # Base is auto-detected by the app; works at domain root or in a subfolder
+    # (e.g. https://surveiopinipublik-indopol.id/cakapolitika-ub)
+
+    # Serve existing files/dirs directly (assets, uploads)
+    RewriteCond %{REQUEST_FILENAME} -f [OR]
+    RewriteCond %{REQUEST_FILENAME} -d
+    RewriteRule ^ - [L]
+
+    # Everything else -> front controller
+    RewriteRule ^ index.php [L]
+</IfModule>
+
+# Block access to sensitive paths
+RedirectMatch 404 /\.(?!well-known)
+RedirectMatch 404 ^/?(app|config|database|storage)/
+
+<IfModule mod_headers.c>
+    Header set X-Content-Type-Options "nosniff"
+    Header set X-Frame-Options "SAMEORIGIN"
+    Header set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>
+
+DirectoryIndex index.php

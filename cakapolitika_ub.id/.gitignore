@@ -1,0 +1,28 @@
+# Secrets & local overrides
+/config/config.local.php
+
+# Runtime
+/storage/logs/*.log
+/storage/sessions/*
+/storage/cache/*
+!/storage/logs/.gitkeep
+!/storage/sessions/.gitkeep
+!/storage/cache/.gitkeep
+
+# Uploads (persona photos, etc.)
+/public/uploads/*
+!/public/uploads/.gitkeep
+
+# Dependencies / editor / OS
+/node_modules/
+# vendor/ is committed on purpose — only PHPMailer, so shared-hosting deploys
+# (FTP, no SSH/composer) still work. Run `composer install` if you clear it.
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
+.vscode/
+
+# Source docs (kept out of repo — provided separately)
+/CAKAPOLITIK _UB_ ID.pdf
+/Data_Legislatif_Jawa_Timur_2024-2029.xlsx
