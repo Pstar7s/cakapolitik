@@ -1,0 +1,83 @@
+:root{
+  --navy:#0d2c54; --navy2:#12356a; --blue:#2b3fa0; --gold:#f5a623; --gold-d:#d98e12;
+  --ink:#1d2939; --mut:#667085; --bg:#f6f7fb; --line:#e3e7ef; --card:#fff;
+  --r-PEMERINTAH:#1f4e9c; --r-SIPIL:#1a7f5a; --r-SWASTA:#b86e00; --r-WARGA:#a43a6b;
+  --ok:#15803d; --warn:#b45309; --bad:#b42318;
+}
+*{box-sizing:border-box}
+body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--bg);margin:0}
+a{color:var(--blue)}
+.container-narrow{max-width:980px}
+.cr-nav{background:#fff;border-bottom:1px solid var(--line);box-shadow:0 1px 6px rgba(13,44,84,.05)}
+.cr-brand{font-weight:800;color:var(--navy);text-decoration:none;letter-spacing:.02em}
+.cr-brand span{color:var(--gold-d)}
+.btn-gold{background:var(--gold);border:none;color:#3a2a06;font-weight:700}
+.btn-gold:hover{background:var(--gold-d);color:#3a2a06}
+.btn-navy{background:var(--navy);border:none;color:#fff;font-weight:600}
+.btn-navy:hover{background:var(--navy2);color:#fff}
+.card-cr{background:var(--card);border:1px solid var(--line);border-radius:14px}
+.mut{color:var(--mut)}
+.small-x{font-size:.82rem}
+pre.plain{white-space:pre-wrap;font-family:inherit;margin:0}
+.badge-peran{display:inline-block;padding:.12rem .55rem;border-radius:999px;color:#fff;font-size:.76rem;font-weight:700}
+.bg-PEMERINTAH{background:var(--r-PEMERINTAH)} .bg-SIPIL{background:var(--r-SIPIL)} .bg-SWASTA{background:var(--r-SWASTA)} .bg-WARGA{background:var(--r-WARGA)}
+.bl-PEMERINTAH{border-left:4px solid var(--r-PEMERINTAH)} .bl-SIPIL{border-left:4px solid var(--r-SIPIL)} .bl-SWASTA{border-left:4px solid var(--r-SWASTA)} .bl-WARGA{border-left:4px solid var(--r-WARGA)}
+.status-pill{display:inline-block;padding:.15rem .6rem;border-radius:999px;font-size:.78rem;font-weight:700;background:#e8ecf5;color:var(--navy)}
+.status-pill.berjalan{background:#dcfce7;color:#166534}.status-pill.lobby{background:#fef3c7;color:#92400e}
+.status-pill.selesai,.status-pill.dinilai{background:#e0e7ff;color:#3730a3}
+
+/* ---- Login ---- */
+.login-wrap{min-height:calc(100vh - 56px);display:flex;align-items:center;justify-content:center;padding:1rem}
+.login-card{width:100%;max-width:420px;padding:1.6rem}
+
+/* ---- Ruang sesi ---- */
+.room-top{position:sticky;top:0;z-index:30;background:var(--navy);color:#fff}
+.room-top .inner{display:flex;align-items:center;gap:.75rem;padding:.55rem 1rem;flex-wrap:wrap}
+.room-title{font-weight:700;font-size:.98rem;flex:1;min-width:140px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.timer{font-variant-numeric:tabular-nums;font-weight:800;font-size:1.35rem;background:rgba(255,255,255,.12);padding:.1rem .7rem;border-radius:10px;min-width:92px;text-align:center}
+.timer.low{background:#b42318}.timer.pause{background:#b45309}
+.fase-pill{background:var(--gold);color:#3a2a06;font-weight:700;border-radius:999px;padding:.15rem .75rem;font-size:.8rem}
+.room-tabs{display:flex;gap:.25rem;overflow-x:auto;padding:.4rem .6rem;background:#fff;border-bottom:1px solid var(--line);position:sticky;top:52px;z-index:20}
+.room-tabs button{border:0;background:transparent;padding:.45rem .85rem;border-radius:999px;font-weight:600;color:var(--mut);white-space:nowrap}
+.room-tabs button.active{background:var(--navy);color:#fff}
+.room-tabs .dot{display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--gold);margin-left:.3rem}
+.room-main{max-width:1100px;margin:0 auto;padding:1rem}
+.panel{display:none}.panel.active{display:block}
+.peran-banner{border-radius:14px;color:#fff;padding:1rem 1.1rem}
+.feed-item{background:#fff;border:1px solid var(--line);border-radius:12px;padding:.8rem .95rem;margin-bottom:.65rem}
+.feed-item .meta{display:flex;gap:.5rem;align-items:center;flex-wrap:wrap;font-size:.8rem;color:var(--mut);margin-bottom:.35rem}
+.feed-item .lbl{font-size:.72rem;font-weight:800;text-transform:uppercase;letter-spacing:.05em;color:var(--mut);margin-top:.5rem}
+.feed-item.baru{animation:flash 1.6s ease-out}
+@keyframes flash{from{background:#fff7d6}to{background:#fff}}
+.thread{margin-left:1rem;border-left:2px solid var(--line);padding-left:.75rem}
+.filter-chips button{border:1px solid var(--line);background:#fff;border-radius:999px;padding:.2rem .7rem;font-size:.8rem;margin:0 .25rem .35rem 0}
+.filter-chips button.active{background:var(--navy);color:#fff;border-color:var(--navy)}
+.wc{font-variant-numeric:tabular-nums;font-weight:700}
+.wc.ok{color:var(--ok)}.wc.bad{color:var(--bad)}
+.neg-log{height:340px;overflow-y:auto;background:#fff;border:1px solid var(--line);border-radius:12px;padding:.6rem}
+.neg-msg{margin-bottom:.45rem;padding:.4rem .6rem;border-radius:10px;background:#f1f4fa;font-size:.92rem}
+.klausul{background:#fff;border:1px solid var(--line);border-radius:12px;padding:.85rem;margin-bottom:.7rem}
+.klausul.lock{border-color:var(--gold);box-shadow:0 0 0 2px rgba(245,166,35,.25)}
+.klausul textarea{min-height:120px}
+.klausul .isi{white-space:pre-wrap}
+.lockbadge{font-size:.76rem;background:#fff3cd;color:#664d03;border-radius:999px;padding:.1rem .6rem}
+.sticky-actions{position:sticky;bottom:0;background:linear-gradient(transparent,var(--bg) 40%);padding:.75rem 0}
+.toastbox{position:fixed;right:1rem;bottom:1rem;z-index:99;max-width:340px}
+.toastbox .t{background:var(--navy);color:#fff;border-radius:10px;padding:.6rem .9rem;margin-top:.4rem;box-shadow:0 6px 20px rgba(0,0,0,.25);font-size:.9rem}
+.toastbox .t.err{background:var(--bad)}
+.conn{font-size:.72rem;opacity:.85}
+.conn.off{color:#fecaca;font-weight:700}
+
+/* ---- Dosen ---- */
+.stat-tile{background:#fff;border:1px solid var(--line);border-radius:12px;padding:.7rem .9rem}
+.stat-tile .n{font-size:1.5rem;font-weight:800;color:var(--navy);line-height:1.1}
+.role-col{background:#fff;border:1px solid var(--line);border-radius:12px;padding:.7rem .9rem}
+.score-card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:1rem}
+.score-card input[type=number]{max-width:92px}
+.rasional{font-size:.84rem;color:var(--mut);margin:.15rem 0 .5rem}
+.ai-label{background:#eef2ff;color:#3730a3;border-radius:8px;padding:.35rem .6rem;font-size:.82rem}
+table.tbl{width:100%;border-collapse:collapse;font-size:.9rem}
+table.tbl th,table.tbl td{padding:.45rem .55rem;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+table.tbl th{font-size:.76rem;text-transform:uppercase;letter-spacing:.04em;color:var(--mut)}
+.tbl-wrap{overflow-x:auto}
+@media (max-width:576px){.room-tabs{position:static}.room-title{flex-basis:100%}.timer{font-size:1.15rem}.room-main{padding:.7rem}}

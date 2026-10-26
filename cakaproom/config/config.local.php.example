@@ -1,0 +1,11 @@
+<?php
+/** Salin ke config.local.php; hanya isi key yang di-override. JANGAN di-commit. */
+return [
+    'app' => ['env' => 'production', 'debug' => false /*, 'base_url' => 'https://ub.ac.id/cakapolitika-ub/cakaproom' */],
+    'db'  => ['host' => '127.0.0.1', 'name' => 'cakaproom', 'user' => 'USER', 'pass' => 'REPLACE_ME'],
+    'claude' => ['key' => 'sk-ant-REPLACE_ME'],
+    'mail' => [
+        'driver' => 'smtp', 'from' => 'no-reply@example.ub.ac.id',
+        'smtp' => ['host' => 'smtp.example', 'port' => 587, 'user' => 'USER', 'pass' => 'REPLACE_ME', 'secure' => 'tls'],
+    ],
+];
